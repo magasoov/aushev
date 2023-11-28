@@ -26,7 +26,7 @@ class fake_ping(loader.Module):
     strings = {'name': 'fake ping v4'}
     
     async def write_command_handler(client, message):
-    if len(message.command) < 2:
+    if len(message.command):
         return await message.reply_text("Введите текст разработчик => @magaasov")
     m = await message.reply_text("Печатает...")
     name = (
